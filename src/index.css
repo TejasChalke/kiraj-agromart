@@ -11,5 +11,9 @@
 
 :root {
   --color-primary: #f6641b;
+  --color-secondary: #ffd9c5;
+  --bg-color: #f6f5fb;
+  --green: #77bb1d;
+  --gray: rgb(129, 128, 128);
   --light-gray: rgb(228, 228, 228);
 }

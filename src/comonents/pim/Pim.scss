@@ -1,0 +1,168 @@
+#pimContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    background-color: var(--bg-color);
+    height: 100%;
+
+    #pimHeader {
+        width: 100%;
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+        padding: .5rem 1rem;
+        background-color: white;
+
+        .pimHeaderOption {
+            color: var(--gray);
+            margin-right: 1rem;
+            padding: .5rem 1rem;
+            border-radius: 4px;
+
+            &.cursor {
+                cursor: pointer;
+            }
+
+            &.active {
+                background-color: var(--color-secondary);
+                color: var(--color-primary);
+            }
+        }
+    }
+
+    #addEmployeeForm {
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr 75%;
+        padding: 1rem;
+
+        #formTitle {
+            font-size: 1.5rem;
+            font-weight: 500;
+            color: rgb(72, 72, 72);
+            grid-column: span 2;
+            border-bottom: 1px solid black;
+            padding: .5rem 1rem;
+        }
+
+        #formImage {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: center;
+            padding: 1rem;
+            height: 250px;
+            
+            i {
+                &.fa-user {
+                    position: relative;
+                    font-size: 5rem;
+                    background-color: var(--light-gray);
+                    padding: 1rem;
+                    border-radius: 4px;
+                    color: gray;
+                    cursor: pointer;
+                }
+
+                &.fa-plus {
+                    position: absolute;
+                    color: white;
+                    background-color: var(--color-primary);
+                    padding: .5rem;
+                    font-size: 1.5rem;
+                    border-radius: 50%;
+                    top: 75%;
+                }
+            }
+
+            .imageText {
+                font-size: .8rem;
+                text-align: center;
+                width: 80%;
+                margin-top: .5rem;
+            }
+        }
+
+        #formInfo {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: flex-start;
+            padding: 1rem;
+
+            .formInfoContainer {
+                width: 100%;
+
+                .formInfoTitleContainer, .formInfoFieldContainer {
+                    width: 100%;
+                    display: grid;
+                    grid-template-columns: 1fr 1fr 1fr;
+                }
+
+                .formInfoFieldContainer {
+                    margin-bottom: 1rem;
+                    border-left: 1px solid black;
+
+                    input {
+                        border: 1px solid black;
+                        border-left: none;
+                        padding: .5rem 1rem;
+                    }
+                }
+                
+                .formInfoField, .formInfoTitle {
+                    padding: .5rem 1rem;
+                    text-transform: capitalize;
+                }
+            }
+
+        }
+
+        #formButtons {
+            grid-column: span 2;
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            padding: 1rem;
+
+            #instruction {
+                margin-right: auto;
+            }
+
+            .formButton {
+                width: 8rem;
+                text-align: center;
+                background-color: white;
+                border: 2px solid var(--green);
+                color: var(--green);
+                padding: .25rem 1rem;
+                margin-left: .5rem;
+                font-size: 1.5rem;
+                border-radius: 20px;
+                cursor: pointer;
+
+                &.invert {
+                    background-color: var(--green);
+                    color: white;
+                }
+            }
+        }
+    }
+
+    #employeeList {
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        padding: 1rem;
+        gap: 1rem;
+
+        .employeeListItem {
+            background-color: white;
+            padding: 1rem;
+            border-radius: 4px;
+            text-transform: capitalize;
+        }
+    }
+}
