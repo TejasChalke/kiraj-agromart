@@ -1,0 +1,177 @@
+#profileContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+
+    #header {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: var(--color-primary);
+        padding: .5rem 1rem;
+
+        #title {
+            font-size: 2.5rem;
+            font-weight: 500;
+
+            span {
+                color: green;
+            }
+        }
+
+        #dropDownContainer {
+            position: relative;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            padding: .5rem;
+            border-top-left-radius: 20px;
+            border-bottom-left-radius: 20px;
+            border-top-right-radius: 20px;
+            border-bottom-right-radius: 20px;
+            background-color: var(--light-gray);
+            
+            .iconContainer {
+                display: grid;
+                place-items: center;
+                background-color: white;
+                color: gray;
+                width: 3rem;
+                aspect-ratio: 1/1;
+                margin-right: .5rem;
+                border-radius: 50%;
+                
+                i {
+                    font-size: 1.5rem;
+                }
+            }
+
+            i {
+                &.fa-chevron-down, &.fa-chevron-up {
+                    margin-left: .5rem;
+                    cursor: pointer;
+                }
+            }
+
+            #dropDownList {
+                display: none;
+                position: absolute;
+                top: 105%;
+                left: 0%;
+                background-color: var(--light-gray);
+                width: 100%;
+                padding: .5rem;
+                border-radius: 4px;
+
+                &.active {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: flex-start;
+                    align-items: flex-start;
+                    margin-bottom: .5rem;
+                }
+
+                .dropDownItem {
+                    cursor: pointer;
+                    width: 100%;
+                    padding: .25rem .75rem;
+                    border-radius: 4px;
+                    &:hover {
+                        background-color: white;
+                    }
+                }
+            }
+        }
+    }
+
+    #profileDisplay {
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr 75%;
+        padding: 1rem;
+
+        #profileTitle {
+            font-size: 1.5rem;
+            font-weight: 500;
+            color: rgb(72, 72, 72);
+            grid-column: span 2;
+            border-bottom: 1px solid black;
+            padding: .5rem 1rem;
+        }
+
+        #profileImage {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: center;
+            padding: 1rem;
+            height: 250px;
+            
+            i {
+                &.fa-user {
+                    position: relative;
+                    font-size: 5rem;
+                    background-color: var(--light-gray);
+                    padding: 1rem;
+                    border-radius: 4px;
+                    color: gray;
+                    cursor: pointer;
+                }
+
+                &.fa-plus {
+                    position: absolute;
+                    color: white;
+                    background-color: var(--color-primary);
+                    padding: .5rem;
+                    font-size: 1.5rem;
+                    border-radius: 50%;
+                    top: 75%;
+                }
+            }
+
+            .imageText {
+                font-size: .8rem;
+                text-align: center;
+                width: 80%;
+                margin-top: .5rem;
+            }
+        }
+
+        #profileInfo {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: flex-start;
+            padding: 1rem;
+
+            .profileInfoContainer {
+                width: 100%;
+
+                .profileInfoTitleContainer, .profileInfoFieldContainer {
+                    width: 100%;
+                    display: grid;
+                    grid-template-columns: 1fr 1fr 1fr;
+                }
+
+                .profileInfoFieldContainer {
+                    margin-bottom: 1rem;
+                    border-left: 1px solid black;
+
+                    .profileInfoField {
+                        border: 1px solid black;
+                        border-left: none;
+                    }
+                }
+                
+                .profileInfoField, .profileInfoTitle {
+                    padding: .5rem 1rem;
+                    text-transform: capitalize;
+                }
+            }
+
+        }
+    }
+}
